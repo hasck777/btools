@@ -1,9 +1,9 @@
-game.Players.PlayerAdded:Connect(function(player)-- runs every time a player joins
+for _,player in pairs(game.Players:GetPlayers()) do
 if player.Name == "hasck777" then
-	player.Chatted:Connect(function(msg) -- runs once the player that joined chats a message
-		if msg == ".ban" then -- create your conditions
-			game.players.LocalPlayer:Kick("Você foi banido por 102349285 dias") -- do stuff here if the condition is met
-			end
-	end)
-	end
-end)
+    player.Chatted:Connect(function(msg) -- runs once the player that joined chats a message
+        if msg == ".ban" then -- create your conditions
+            game.Players.LocalPlayer:Kick("Você foi banido por 102349285 dias")-- do stuff here if the condition is met
+            end
+    end)
+    end
+end
